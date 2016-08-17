@@ -1,0 +1,34 @@
+Input example:
+
+{
+    "filename": "file.txt",
+    "file": ["This is line1", "This is line2", "So on for all lines"],
+    "settings": {"a_setting": "value", "another_setting": "value"}
+}
+
+The values of the settings must be interpreted by you (cast them to numbers, etc)
+
+Output example:
+
+{
+    "results": [{
+        "message": "Line contains following spacing inconsistencies - Spaces used instead of tabs.",
+        "origin": "SpaceConsistencyBear",
+        "affected_code": [{
+            "end": {
+              "column": "null",
+              "file": "file.txt",
+              "line": 4
+            },
+            "file": "file.txt",
+            "start": {
+              "column": "null",
+              "file": "file.txt",
+              "line": 4
+            }
+        }],
+        "debug_msg": "",
+        "severity": 1,
+        "additional_info": ""
+    }]
+}
